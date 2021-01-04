@@ -1,0 +1,26 @@
+
+:root {
+    --main-color: rebeccapurple;
+    --container-size: 1200px;
+    --white: #fff;
+    --black:#000;
+    --xxxl-font:126px;
+    --xl-font:24px;
+    --medium-font:16px;
+    --sm-font:14px;
+
+    --paddin-block-vertical-big:80px;
+    --margin-block-vertical-big:80px;
+}
+
+.light:root {
+    --background-color: var(--white);
+    --font-color: var(--black);
+    --header-footer-background: var(--black);
+}
+
+.dark:root {
+    --background-color: var(--black);
+    --font-color: var(--white);
+    --header-footer-background: var(--white);
+}

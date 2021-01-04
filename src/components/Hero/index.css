@@ -1,0 +1,23 @@
+.hero {
+    height: 400px;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-bottom: var(--margin-block-vertical-big);
+}
+
+
+
+.hero .container, .banner-text-group {
+    height: 100%;
+}
+
+.banner-text-group {
+    display: flex;
+    align-items: center;
+}
+
+.banner-text-group__title {
+    color: var(--white);
+    font-size: var(--xxxl-font);
+    margin: 0;
+}

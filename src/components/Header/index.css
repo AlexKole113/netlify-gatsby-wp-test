@@ -1,0 +1,24 @@
+@import '../../global/style.css';
+
+
+.header {
+    background-color: var(--header-footer-background);
+    color: var(--font-color);
+    margin-bottom: var(--margin-block-vertical-big);
+}
+
+.header a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.headerInner {
+    margin: 0 auto;
+    max-width: var(--container-size);
+    padding: 1.45rem 0;
+    display: flex;
+}
+
+.headerInner .site-title {
+    margin: 0;
+}

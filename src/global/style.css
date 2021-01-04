@@ -1,0 +1,48 @@
+@import "vars.css";
+
+body,html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+body p {
+    color: var(--font-color);
+}
+
+#___gatsby,
+#gatsby-focus-wrapper {
+    height: 100%;
+}
+
+#gatsby-focus-wrapper {
+    display: flex;
+    flex-flow: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex:1;
+}
+
+.col-2 {
+    flex:2;
+}
+
+.post-onHome a {
+    font-size: var(--xl-font);
+    text-decoration: underline;
+    color: var(--font-color);
+}

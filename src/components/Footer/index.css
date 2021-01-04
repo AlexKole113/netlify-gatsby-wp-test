@@ -1,0 +1,13 @@
+@import '../../global/style.css';
+
+.footer {
+    margin-top: auto;
+    min-height: 300px;
+    background-color: var(--header-footer-background);
+    color: var(--font-color);
+    margin-top: var(--margin-block-vertical-big);
+}
+
+.col {
+    flex:1
+}

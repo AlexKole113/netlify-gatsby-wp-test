@@ -1,0 +1,23 @@
+.post-collection {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: var(--margin-block-vertical-big);
+}
+
+.post-collection__link {
+
+}
+
+.post-collection__img {
+    height: 200px;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.post-onHome {
+    height: 350px;
+    width: 33%;
+    min-width: 300px;
+    overflow: hidden;
+    padding: 15px;
+}

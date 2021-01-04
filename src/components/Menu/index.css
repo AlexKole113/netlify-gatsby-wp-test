@@ -1,0 +1,16 @@
+@import "../../global/style.css";
+
+
+.main-nav {
+    display: block;
+}
+
+.main-nav-list{
+    width: 100%;
+    display: flex;
+    margin: 0;
+}
+
+.main-nav-list__item {
+    margin: 0 auto;
+}
