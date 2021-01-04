@@ -22,3 +22,8 @@
 .headerInner .site-title {
     margin: 0;
 }
+
+.menu-section {
+    display: flex;
+    align-items: center;
+}

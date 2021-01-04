@@ -20,7 +20,7 @@ export default class Header extends Component {
                 <div className={`col`}>
                     <Logo />
                 </div>
-                <div className={`col-2`}>
+                <div className={`col-2 menu-section`}>
                     <Menu />
                 </div>
                 <div className={`col`}>

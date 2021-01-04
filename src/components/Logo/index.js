@@ -11,10 +11,17 @@ export default class Logo extends Component {
 
     render() {
         return (<div className={`logo-block`} >
-                    {/*<StaticQuery query={graphql``}*/}
-                    {/*             render={ props => (<Link to={`/`}><img src={''}/></Link>)*/}
-                    {/*             }*/}
-                    {/*/>*/}
+                    <StaticQuery query={graphql`{
+                                      wordpressWpLogo {
+                                        url {
+                                          source_url
+                                        } 
+                                        
+                                      }
+                                    }`}
+                                 render={ props => (<Link to={`/`}><img src={props.wordpressWpLogo.url.source_url}/></Link>)
+                                 }
+                    />
                 </div>)
 
     }

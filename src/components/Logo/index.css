@@ -1,0 +1,10 @@
+.logo-block {
+    max-width: 80px;
+    margin: 0 auto;
+
+}
+
+.logo-block img {
+    max-width: 100%;
+    margin: 0;
+}

@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path:'.env'
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby WordPress Starter`,
@@ -31,8 +35,8 @@ module.exports = {
       resolve: "gatsby-source-wordpress",
       options: {
         minimizeDeprecationNotice: true,
-        baseUrl: "test-18a1fc.axe-web.com",
-        protocol: "https",
+        baseUrl: process.env.API_URL,
+        protocol: process.env.API_PROTOCOL,
         hostingWPCOM: false,
         useACF: false,
         verboseOutput: false,
@@ -47,8 +51,10 @@ module.exports = {
           "**/taxonomies",
           "**/users",
           "**/menus",
+          "**/logo",
         ],
       },
     },
+      'gatsby-plugin-netlify'
   ],
 }
