@@ -4,9 +4,7 @@ import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import PostCollection from "../components/PostCollection";
 
-
 export default ({pageContext}) => {
-
 
     return(
     <>
