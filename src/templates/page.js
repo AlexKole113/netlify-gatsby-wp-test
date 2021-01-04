@@ -1,8 +1,8 @@
 import React from "react";
-import Layout from "../components/Layout/index.js";
-import Seo from "../components/Seo/index.js";
+import Layout from "../components/Layout";
+import Seo from "../components/Seo";
 import {graphql, Link, StaticQuery} from "gatsby";
-import PostCollection from "../components/PostCollection/index.js";
+import PostCollection from "../components/PostCollection";
 
 export default ({pageContext}) => {
     console.log(pageContext)

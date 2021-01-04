@@ -1,8 +1,8 @@
 import React from "react";
 import './style/post.css'
-import Layout from "../components/Layout/index.js";
-import Seo from "../components/Seo/index.js";
-import PostCollection from "../components/PostCollection/index.js";
+import Layout from "../components/Layout";
+import Seo from "../components/Seo";
+import PostCollection from "../components/PostCollection";
 
 
 export default ({pageContext}) => {
