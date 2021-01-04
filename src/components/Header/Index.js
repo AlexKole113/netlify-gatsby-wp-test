@@ -2,9 +2,9 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, {Component} from "react"
 import ThemeToggler from "../ThemeToggler";
-import Menu from "../Menu";
+import Menu from "../Menu/index.js";
 import './index.css'
-import Logo from "../Logo";
+import Logo from "../Logo/index.js";
 
 
 export default class Header extends Component {
