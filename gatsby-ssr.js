@@ -3,3 +3,13 @@
  *
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
+import React from 'react';
+import { Provider } from 'react-redux';
+import mystore from './src/redux';
+
+
+export const wrapRootElement = ({ element }) => {
+    return (
+        <Provider store={mystore}>{element}</Provider>
+    );
+}
