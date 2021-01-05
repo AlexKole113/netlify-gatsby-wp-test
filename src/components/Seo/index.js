@@ -5,12 +5,18 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, {useState} from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import {connect} from 'react-redux';
 
-function Seo({ description, lang, meta, title }) {
+
+
+
+function Seo({ description, lang, meta, title, theme }) {
+
+  console.log(`SEO - ${theme}`)
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -28,46 +34,48 @@ function Seo({ description, lang, meta, title }) {
   const metaDescription = description || site.siteMetadata.description
 
   return (
-    <Helmet
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    >
-      <html className={`light`} lang={lang} />
-    </Helmet>
+
+        <Helmet
+          title={title}
+          titleTemplate={`%s | ${site.siteMetadata.title}`}
+          meta={[
+            {
+              name: `description`,
+              content: metaDescription,
+            },
+            {
+              property: `og:title`,
+              content: title,
+            },
+            {
+              property: `og:description`,
+              content: metaDescription,
+            },
+            {
+              property: `og:type`,
+              content: `website`,
+            },
+            {
+              name: `twitter:card`,
+              content: `summary`,
+            },
+            {
+              name: `twitter:creator`,
+              content: site.siteMetadata.author,
+            },
+            {
+              name: `twitter:title`,
+              content: title,
+            },
+            {
+              name: `twitter:description`,
+              content: metaDescription,
+            },
+          ].concat(meta)}
+        >
+          <html className={theme} lang={lang} />
+        </Helmet>
+
 
   )
 }
@@ -76,6 +84,7 @@ Seo.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
+  theme: 'light'
 }
 
 Seo.propTypes = {
@@ -83,6 +92,17 @@ Seo.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  theme: PropTypes.string,
 }
 
-export default Seo
+
+const mapStateToProps = (state) => ({
+    theme: state.theme,
+});
+
+
+export default connect( mapStateToProps )( Seo );
+
+
+
+

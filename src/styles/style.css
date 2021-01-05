@@ -9,8 +9,12 @@ body {
     color: var(--font-color);
 }
 
-body p {
-    color: var(--font-color);
+h1,h2,h3,h4,h5,h6 {
+    color: var(--font-color)!important;
+}
+
+p {
+    color: var(--font-color)!important;
 }
 
 #___gatsby,
@@ -39,6 +43,18 @@ body p {
 
 .col-2 {
     flex:2;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
 }
 
 .post-onHome a {

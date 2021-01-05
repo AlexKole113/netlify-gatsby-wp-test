@@ -22,7 +22,8 @@
   },
   "devDependencies": {
     "gatsby-plugin-netlify": "^2.8.0",
-    "prettier": "2.1.0"
+    "prettier": "2.1.0",
+    "react-redux": "^7.2.2"
   },
   "keywords": [
     "gatsby"
