@@ -8,6 +8,11 @@
     margin-top: var(--margin-block-vertical-big);
 }
 
-.col {
-    flex:1
+.footerInner {
+    margin: 0 auto;
+    max-width: var(--container-size);
+    padding: 1.45rem 0;
+    display: flex;
+    height: 100%;
 }
+

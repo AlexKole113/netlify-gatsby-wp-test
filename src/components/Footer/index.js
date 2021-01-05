@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import './index.css'
+import ThemeToggler from "../ThemeToggler";
 
 export default class Footer extends React.Component {
 
@@ -14,17 +15,17 @@ export default class Footer extends React.Component {
     render() {
         return (
             <footer className={'footer'}>
-                <div className={`row`}>
-                    <div className={`col`}>
-                        <span>{this.props.col1Text}</span>
+                <div className={`row footerInner`}>
+                        <div className={`col d-flex align-items-center justify-content-center`}>
+                            <span>{this.props.col1Text}</span>
+                        </div>
+                        <div className={`col d-flex align-items-center justify-content-center`}>
+                            <span>{this.props.col2Text}</span>
+                        </div>
+                        <div className={`col d-flex align-items-center justify-content-center`}>
+                            <ThemeToggler />
+                        </div>
                     </div>
-                    <div className={`col`}>
-                        <span>{this.props.col2Text}</span>
-                    </div>
-                    <div className={`col`}>
-                        <span>{this.props.col3Text}</span>
-                    </div>
-                </div>
             </footer>
         )
 
