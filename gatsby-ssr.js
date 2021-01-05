@@ -3,18 +3,3 @@
  *
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
-
-// You can delete this file if you're not using it
-import { Provider } from 'react-redux'
-import { renderToString } from 'react-dom/server'
-
-import store from './src/pages/reducers/main'
-
-export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
-    const ConnectedBody = () => (
-        <Provider store={store}>
-            {bodyComponent}
-        </Provider>
-    )
-    replaceBodyHTMLString(renderToString(<ConnectedBody />))
-}

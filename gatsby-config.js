@@ -56,12 +56,5 @@ module.exports = {
       },
     },
       'gatsby-plugin-netlify',
-    {
-      resolve: `gatsby-plugin-react-redux`,
-      options: {
-        // [required] - path to your createStore module
-        pathToCreateStoreModule: './src/pages/reducers/main.js',
-      },
-    },
   ],
 }

@@ -1,6 +1,6 @@
 import React from "react"
 import './index.css'
-import mystore from '../../pages/reducers/main';
+
 
 
 
@@ -13,9 +13,7 @@ export default class ThemeToggler extends React.Component {
     }
 
     toggleTheme(){
-        console.log( mystore.getState() )
-        const theme = ( mystore.getState().theme === 'light' ) ? 'dark' : 'light';
-        mystore.dispatch( { type: 'CHANGING_THEME' , theme } )
+       
     };
 
     render(){

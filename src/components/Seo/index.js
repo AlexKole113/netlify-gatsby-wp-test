@@ -9,12 +9,12 @@ import React, {useState} from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import {connect} from 'react-redux';
 
 
 
 
-function Seo({ description, lang, meta, title, theme }) {
+
+export default function Seo({ description, lang, meta, title, theme }) {
 
   console.log(`SEO - ${theme}`)
   const { site } = useStaticQuery(
@@ -95,13 +95,6 @@ Seo.propTypes = {
   theme: PropTypes.string,
 }
 
-
-const mapStateToProps = (state) => ({
-    theme: state.theme,
-});
-
-
-export default connect( mapStateToProps )( Seo );
 
 
 
