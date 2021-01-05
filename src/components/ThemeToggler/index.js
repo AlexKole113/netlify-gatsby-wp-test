@@ -1,11 +1,12 @@
 import React from "react"
 import './index.css'
 import mystore from '../../redux';
+import {connect} from "react-redux";
 
 
 
 
-export default class ThemeToggler extends React.Component {
+class ThemeToggler extends React.Component {
 
     constructor(props) {
         super(props);
@@ -19,11 +20,12 @@ export default class ThemeToggler extends React.Component {
     };
 
     render(){
+        const {theme} = this.props;
 
         return(
             <label className="theme-switcher">
                 <input
-                    className="theme-switcher__input"
+                    className={`theme-switcher__input ${theme}`}
                     name="theme-switcher"
                     onChange={this.toggleTheme}
                     type="checkbox"
@@ -33,3 +35,11 @@ export default class ThemeToggler extends React.Component {
         )
     }
 }
+
+
+const mapStateToProps = (state) => ({
+    theme: state.theme,
+});
+
+
+export default connect( mapStateToProps )( ThemeToggler );

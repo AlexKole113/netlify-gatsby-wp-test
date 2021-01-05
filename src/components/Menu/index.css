@@ -11,6 +11,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0;
+    list-style: none;
 }
 
 .main-nav-list__item {
@@ -19,5 +20,5 @@
 }
 
 .main-nav-list__item a {
-    color: var(--background-color);
+    color: var(--white);
 }

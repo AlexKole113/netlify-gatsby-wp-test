@@ -16,7 +16,6 @@ import {connect} from 'react-redux';
 
 function Seo({ description, lang, meta, title, theme }) {
 
-  console.log(`SEO - ${theme}`)
   const { site } = useStaticQuery(
     graphql`
       query {

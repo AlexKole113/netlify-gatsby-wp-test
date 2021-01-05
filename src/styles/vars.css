@@ -22,5 +22,5 @@
 .dark:root {
     --background-color: var(--black);
     --font-color: var(--white);
-    --header-footer-background: var(--white);
+    --header-footer-background: var(--black);
 }

@@ -24,11 +24,6 @@
     transition: 0.2s;
 }
 
-.theme-switcher__input:checked ~ .theme-switcher__bounce {
+.theme-switcher__input.dark ~ .theme-switcher__bounce {
     left: 27px;
-}
-
-.theme-switcher__input:active ~ .theme-switcher__bounce,
-.theme-switcher__input:focus ~ .theme-switcher__bounce {
-    box-shadow: 0 0 4px 4px red;
 }
