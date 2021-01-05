@@ -28,12 +28,12 @@ export default class PostCollection extends React.Component {
                     <h2>Last Posts</h2>
                     <div className={`post-collection`}>
                         {props.allWordpressPost.edges.map( elm => <div key={elm.node.id} className={`post-onHome`} >
-                                                                        <Link className={`post-collection__link`} to={`/post/${elm.node.slug}`}>
-                                                                            <div style={{backgroundImage:`url(${ (elm.node.featured_media) ? (elm.node.featured_media.source_url ) : ''})`}} className={`post-collection__img`}></div>
-                                                                            <p>{elm.node.title}</p>
-                                                                        </Link>
-                                                                        <p dangerouslySetInnerHTML={{__html:elm.node.excerpt}} />
-                                                                   </div> )}
+                            <Link className={`post-collection__link`} to={`/post/${elm.node.slug}`}>
+                                <div style={{backgroundImage:`url(${ (elm.node.featured_media) ? (elm.node.featured_media.source_url ) : ''})`}} className={`post-collection__img`}></div>
+                                <p>{elm.node.title}</p>
+                            </Link>
+                            <p dangerouslySetInnerHTML={{__html:elm.node.excerpt}} />
+                       </div> )}
                     </div>
                 </div>
             )} />
