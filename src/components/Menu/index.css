@@ -9,11 +9,13 @@
 .main-nav-list{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
 }
 
 .main-nav-list__item {
     margin: 0 auto;
+    padding: 0 5px;
 }
 
 .main-nav-list__item a {

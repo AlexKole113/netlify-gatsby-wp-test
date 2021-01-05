@@ -10,7 +10,6 @@ const IndexPage = () => (
     <>
       <Seo title={'test'} />
       <Layout>
-          <Hero />
           <section className={'container'}>
               <PostCollection />
           </section>
